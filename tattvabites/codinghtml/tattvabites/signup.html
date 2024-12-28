@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tattva bites</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main Wrapper for Flexbox Layout -->
+  <div class="main-wrapper">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html">
+            <img src="images/p1.png" alt="Logo" class="logo">
+          </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="signup-section">
+        <!-- Food Animation Container -->
+        <div class="food-animation" id="foodContainer">
+            <span class="food-item" style="left: 10%">🍕</span>
+            <span class="food-item" style="left: 20%">🍔</span>
+            <span class="food-item" style="left: 30%">🌮</span>
+            <span class="food-item" style="left: 40%">🍜</span>
+            <span class="food-item" style="left: 50%">🍱</span>
+            <span class="food-item" style="left: 60%">🍣</span>
+            <span class="food-item" style="left: 70%">🥪</span>
+            <span class="food-item" style="left: 80%">🍪</span>
+            <span class="food-item" style="left: 90%">🍦</span>
+        </div>
+
+        <!-- Signup Container -->
+        <div class="signup-container">
+            <h2>Create Account</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="IN">India</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-input">
+                        <input type="tel" id="phone" name="phone" required 
+                               pattern="[0-9]{10}" 
+                               title="Please enter a valid 10-digit phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <small class="password-hint">Must be at least 8 characters long</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
+                <button type="submit" class="signup-btn">Create Account</button>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login</a>
+                </div>
+            </form>
+        </div>
+    </section>
+      <footer class="footer">
+        <p>&copy; 2024 Tattva bites. All Rights Reserved.</p>
+      </footer>
+    
+      <script src="signup.js"></script>
+    </body>
+    </html>
