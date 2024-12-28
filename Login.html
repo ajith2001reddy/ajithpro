@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main Wrapper for Flexbox Layout -->
+  <div class="main-wrapper">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html">
+            <img src="images/p1.jpeg" alt="Logo" class="logo">
+          </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+    </header>
+   <!--add the login and animation -->
+   <section class="login-section">
+    <!-- Food Animation Container -->
+    <div class="food-animation" id="foodContainer">
+        <span class="food-item" style="left: 10%">🍕</span>
+        <span class="food-item" style="left: 20%">🍔</span>
+        <span class="food-item" style="left: 30%">🌮</span>
+        <span class="food-item" style="left: 40%">🍜</span>
+        <span class="food-item" style="left: 50%">🍱</span>
+        <span class="food-item" style="left: 60%">🍣</span>
+        <span class="food-item" style="left: 70%">🥪</span>
+        <span class="food-item" style="left: 80%">🍪</span>
+        <span class="food-item" style="left: 90%">🍦</span>
+    </div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <h2>Welcome Back</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="remember-forgot">
+                <label class="remember">
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn">Sign In</button>
+
+            <div class="signup-link">
+                Don't have an account? <a href="signup.html">Sign up</a>
+            </div>
+        </form>
+    </div>
+</section>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Food Delivery App. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    fetch('your-api-endpoint')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('result').innerText = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+</body>
+</html>
