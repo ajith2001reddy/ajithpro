@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container mt-4">
+    <h2>{{ greeting }}</h2>
+    <hr>
+    {% if appointments %}
+      <table>
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for appointment in appointments %}
+            <tr>
+              <td>{{ appointment.PatientName }}</td>
+              <td>{{ appointment.DoctorName }}</td>
+              <td>{{ appointment.Date }}</td>
+              <td>{{ appointment.Time }}</td>
+              <td>{{ appointment.Status }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No appointments available.</p>
+    {% endif %}
+  </div>
+{% endblock %}

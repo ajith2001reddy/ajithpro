@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Medical Records</h2>
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Diagnosis</th>
+        <th>Treatment</th>
+    </tr>
+    {% for record in medical_records %}
+    <tr>
+        <td>{{ record.PatientName }}</td>
+        <td>{{ record.Diagnosis }}</td>
+        <td>{{ record.Treatment }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

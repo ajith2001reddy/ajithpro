@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="container mt-4">
+    <h2>{{ greeting }}</h2>
+    <hr>
+    {% if doctors %}
+      <ul class="list-group">
+        {% for doctor in doctors %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <strong>{{ doctor.Name }}</strong>
+            <span>{{ doctor.Contact }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No doctors to show.</p>
+    {% endif %}
+  </div>
+{% endblock %}
